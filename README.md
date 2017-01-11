@@ -4,25 +4,21 @@ So you want to try Tweed but have no patience for installing compilers and comma
 interfaces? That's no problem. Tweed Peek is a precompiled script that you can include
 directly in HTML and try out Tweed, compilers and all.
 
-```shell
-$ npm i tweed-peek
-$ touch index.html
-```
+Tweed Peek is currently hosted [here](https://tweedjs.github.io/peek.js), so here's all
+you need to do.
 
 ```html
 <!DOCTYPE html>
 <html>
   <head>
-    <script src='node_modules/tweed-peek/tweed-peek.min.js'></script>
+    <script src='https://tweedjs.github.io/peek.js'></script>
   </head>
   <body>
     <div id='app'></div>
 
     <script type='application/javascript+tweed'>
-      import { mutating, Node, Engine } from 'tweed'
-      import DOMRenderer from 'tweed/render/dom'
-
-      const engine = new Engine(new DOMRenderer(app))
+      import { mutating, Node } from 'tweed'
+      import render from 'tweed/render/dom'
 
       class Counter {
         @mutating count = 0
@@ -36,7 +32,7 @@ $ touch index.html
         }
       }
 
-      engine.render(new Counter())
+      render(new Counter(), app)
     </script>
   </body>
 </html>
