@@ -8,6 +8,6 @@ export default class InlineScript {
   }
 
   get url () {
-    return window.location.href.replace(/\/?$/, '/__inline__')
+    return window.location.href
   }
 }
