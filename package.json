@@ -1,6 +1,6 @@
 {
   "name": "tweed-peek",
-  "version": "0.3.0-dev",
+  "version": "0.3.0",
   "description": "Precompiled engine for running raw Tweed components in the browser",
   "homepage": "https://github.com/tweedjs/tweed-peek",
   "license": "WTFPL",
