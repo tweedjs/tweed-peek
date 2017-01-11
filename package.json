@@ -1,6 +1,6 @@
 {
   "name": "tweed-peek",
-  "version": "0.2.0",
+  "version": "0.3.0-dev",
   "description": "Precompiled engine for running raw Tweed components in the browser",
   "homepage": "https://github.com/tweedjs/tweed-peek",
   "license": "WTFPL",
@@ -21,9 +21,9 @@
   "dependencies": {
     "babel-core": "^6.21.0",
     "babel-standalone": "^6.21.1",
-    "tweed": "^0.2.2",
-    "tweed-babel-config": "^0.2.0",
-    "tweed-typescript-config": "^0.2.0",
+    "tweed": "^0.3.0",
+    "tweed-babel-config": "^0.3.0",
+    "tweed-typescript-config": "^0.3.0",
     "typescript": "^2.1.4"
   },
   "devDependencies": {
