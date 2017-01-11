@@ -1,0 +1,37 @@
+{
+  "name": "tweed-peek",
+  "version": "0.2.0",
+  "description": "Precompiled engine for running raw Tweed components in the browser",
+  "homepage": "https://github.com/tweedjs/tweed-peek",
+  "license": "WTFPL",
+  "keywords": [
+    "ui",
+    "vdom",
+    "oop",
+    "tweed",
+    "playground",
+    "try",
+    "sneak-peak"
+  ],
+  "bugs": {
+    "url": "https://github.com/tweedjs/tweed/issues"
+  },
+  "repository": "tweedjs/tweed-peek",
+  "author": "Emil Persson <emil.n.persson@gmail.com> (https://emilpersson.se)",
+  "dependencies": {
+    "babel-core": "^6.21.0",
+    "babel-standalone": "^6.21.1",
+    "tweed": "^0.2.2",
+    "tweed-babel-config": "^0.2.0",
+    "tweed-typescript-config": "^0.2.0",
+    "typescript": "^2.1.4"
+  },
+  "devDependencies": {
+    "babel-loader": "^6.2.10",
+    "json-loader": "^0.5.4",
+    "webpack": "^1.14.0"
+  },
+  "scripts": {
+    "prepublish": "NODE_ENV=production webpack"
+  }
+}
