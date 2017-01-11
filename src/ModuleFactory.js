@@ -14,7 +14,15 @@ const MimeType = {
 
 export default class ModuleFactory {
   fromUrl (url, mimeType = null) {
-    if (!/https?:\/\//.test(url)) {
+    if (/^file:\/\//.test(url)) {
+      throw new Error(
+        'For security reasons, browsers do not allow JavaScript to request files using ' +
+        "the 'file:' protocol. Either write your code within <script> tags or spin up a " +
+        'simple file server like this one: https://github.com/indexzero/http-server'
+      )
+    }
+
+    if (!/^https?:\/\//.test(url)) {
       return new Module(url, new BuiltInScript(url), new NullCompiler())
     }
 
@@ -24,7 +32,7 @@ export default class ModuleFactory {
   }
 
   fromCode (code, mimeType) {
-    const url = window.location.href.replace(/\/?$/, '/__inline__')
+    const url = window.location.href
 
     return new Module(url, new InlineScript(code), this._compiler(url, mimeType))
   }
