@@ -41,13 +41,15 @@ you need to do.
 Then just open up `index.html` in a browser and you're up and running!
 
 You don't have to write your code within the `<script>` if you don't want to. Just add a
-`src` attribute and you're golden.
+`src` attribute and you're golden. However, if you do this, browsers will complain if
+you're using `file://` URL's. So you'll have to use a simple web server
+[like this one](https://github.com/indexzero/http-server).
 
 ```html
 <!DOCTYPE>
 <html>
   <head>
-    <script src='node_modules/tweed-peek/tweed-peek.min.js'></script>
+    <script src='https://tweedjs.github.io/peek.js'></script>
     <script type='application/typescript+tweed' src='main.tsx'></script>
   </head>
   <body>
