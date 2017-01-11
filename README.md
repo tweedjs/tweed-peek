@@ -10,7 +10,7 @@ $ touch index.html
 ```
 
 ```html
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
   <head>
     <script src='node_modules/tweed-peek/tweed-peek.min.js'></script>
